@@ -1,0 +1,34 @@
+{
+  "name": "flow-api",
+  "version": "0.1.0",
+  "private": true,
+  "author": "jillix <contact@jillix.com>",
+  "description": "Flow composition manipulation",
+  "contributors": [
+    "Adrian Ottiker <adrian@ottiker.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jillix/flow-api.git"
+  },
+  "keywords": [
+    "flow",
+    "stream",
+    "network"
+  ],
+  "dependencies": {
+  },
+  "engine": {
+    "node": ">=5"
+  },
+  "bugs": {
+    "url": "https://github.com/jillix/flow-api/issues"
+  },
+  "homepage": "https://github.com/jillix/flow-api",
+  "main": "index",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
+
