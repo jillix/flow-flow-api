@@ -1,23 +1,23 @@
 {
   "name": "flow-api",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "author": "jillix <contact@jillix.com>",
+  "author": "jillix <contact@jillix.com> (http://jillix.com)",
   "description": "Flow composition manipulation",
   "contributors": [
-    "Adrian Ottiker <adrian@ottiker.com>"
+    "Adrian Ottiker <adrian@ottiker.com>",
+    "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jillix/flow-api.git"
+    "url": "git+https://github.com/jillix/flow-api.git"
   },
   "keywords": [
     "flow",
     "stream",
     "network"
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "engine": {
     "node": ">=5"
   },
@@ -29,6 +29,9 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "license": "MIT"
 }
-
