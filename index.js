@@ -1,14 +1,9 @@
-var Composition = require('./lib/composition');
-var Service = require('lib/service-api');
+var Composition = require('flow-api');
 
 // ..generate methods
 exports.method = function (options, data, next) {
     // ..do logic
 }
-
-// TODO this mehtod is part of the service-api
-// [":service-api/access", {/*options*/}]
-exports.access = Service.Access.flow;
 
 exports.context = function (options, data, next) {
 
