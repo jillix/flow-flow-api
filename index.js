@@ -2,12 +2,15 @@ var Composition = require('./lib/composition');
 var Service = require('lib/service-api');
 
 // ..generate methods
-flowApi.method = function (options, data, next) {
+exports.method = function (options, data, next) {
     // ..do logic
 }
 
+// TODO this mehtod is part of the service-api
+// [":service-api/access", {/*options*/}]
 exports.access = Service.Access.flow;
-exports.context = function (data, next) {
+
+exports.context = function (options, data, next) {
 
     // get composition instance
     data.comp = Composition.cache(data.comp);
