@@ -6,11 +6,7 @@ var Adapter = {};//require('infrastructure-api').App.flow.adapter;
 // TODO use an LRU cache
 var Cache = {};
 
-// ..generate methods
-exports.method = function (options, data, next) {
-    // ..do logic
-}
-
+// append api instance to data object
 exports.context = function (options, data, next) {
 
     data.api = Cache(data.app);
@@ -26,4 +22,17 @@ exports.context = function (options, data, next) {
     }
 
     next(null, data);
+};
+
+// ..generate methods
+exports.config = {
+    get: function (options, data, next) {
+
+        if (!data.comp) {
+            return next(new Error('Flow-Api: No composition name found.'));
+        }
+
+        // replace data chunk with the composition config
+        data.api.config.get(data.comp, next);
+    }
 };
