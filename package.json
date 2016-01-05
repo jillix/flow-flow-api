@@ -17,7 +17,7 @@
     "network"
   ],
   "dependencies": {
-    "flow-api": "jillix/engine-tools#temp-dev-api"
+    "flow-api": "jillix/flow-api#temp-dev-api"
   },
   "engine": {
     "node": ">=5"
