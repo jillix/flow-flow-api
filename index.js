@@ -1,10 +1,10 @@
-var Composition = require('flow-api');
+var FlowApi = require('flow-api');
 
-exports.instance = {
-    get: function (options, data, next) {
-        next(null, {'inst': 'ance'});
-    }
-}
+// TODO require api crud adapter
+var Adapter = {};//require('infrastructure-api').App.flow.adapter;
+
+// TODO use an LRU cache
+var Cache = {};
 
 // ..generate methods
 exports.method = function (options, data, next) {
@@ -13,19 +13,16 @@ exports.method = function (options, data, next) {
 
 exports.context = function (options, data, next) {
 
-    return next(null, data);
-    // get composition instance
-    data.comp = Composition.cache(data.comp);
-    if (!data.comp) {
-        return Composition.factory(data.comp, function (err, comp) {
+    data.api = Cache(data.app);
 
-            if (err) {
-                return next(err);
-            }
+    if (!data.api) {
+        data.api = new FlowApi(Adapter, data.app);
 
-            data.comp = comp;
-            next(null, data);
-        });
+        if (data.api instanceof Error) {
+            return next(data.api);
+        }
+
+        Cache[data.app] = data.api;
     }
 
     next(null, data);
