@@ -1,5 +1,9 @@
+"use strict";
+
 // dummy flow-api
 class FlowApi {
+
+    constructor (app, adapter) {}
 
     // Instance (getters)
     getInstance (instanceName, cb) {
