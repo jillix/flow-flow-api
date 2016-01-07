@@ -28,7 +28,29 @@ exports.getInstance = function (options, data, next) {
 exports.getInstanceModule = function (options, data, next) {};
 exports.getInstanceRoles = function (options, data, next) {};
 exports.getInstanceListeners = function (options, data, next) {};
-exports.getInstanceListenerDataFlow = function (options, data, next) {};
+exports.getInstanceListenerDataFlow = function (options, data, next) {
+
+    if (!data.comp) {
+        //return next(new Error());
+    }
+
+    if (!data.listener) {
+        //return next(new Error());
+    }
+
+    data.api.getInstanceListenerDataFlow(data.comp, data.listener, function (err, dataFlow) {
+
+        if (err) {
+            return next(err);
+        }
+
+        dataFlow.forEach(function (handler) {
+            next(handler, true);
+        });
+
+        next(null, null);
+    });
+};
 exports.getInstanceListenerEndEvent = function (options, data, next) {};
 exports.getInstanceListenerErrorEvent = function (options, data, next) {};
 exports.getInstanceModuleConfig = function (options, data, next) {};
@@ -44,7 +66,7 @@ exports.setInstanceListenerEndEvent = function (options, data, next) {};
 exports.setInstanceListenerErrorEvent = function (options, data, next) {};
 exports.setInstanceModuleConfig = function (options, data, next) {};
 
-export.config = {
+exports.config = {
     get: function (options, data, next) {
 
         console.log(Object.getPrototypeOf(data.api));
