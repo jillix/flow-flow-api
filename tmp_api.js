@@ -23,7 +23,18 @@ class FlowApi {
     }
 
     getInstanceListenerDataFlow (instanceName, listenerName, cb) {
+
         // .. get the data flow from an instance listener 
+        var listenerDataFlow = [
+            [":instance/methodA", {some: 'options'}],
+            [":instance/methodB", {some: 'options'}],
+            [":instance/methodC", {some: 'options'}],
+            [":instance/methodD", {some: 'options'}],
+            [":instance/methodE", {some: 'options'}],
+            [":instance/methodF", {some: 'options'}]
+        ]
+
+        cb(null, listenerDataFlow);
     }
 
     getInstanceListenerEndEvent (instanceName, listenerName, cb) {
