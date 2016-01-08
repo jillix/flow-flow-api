@@ -45,6 +45,36 @@ exports.getInstanceListenerDataFlow = function (options, data, next) {
         }
 
         dataFlow.forEach(function (handler) {
+            // TODO generate a nice object
+            handler = handler instanceof Array ? handler : [handler];
+            var options = handler[1] || {};
+
+            var type = handler[0][0];
+            handler[0] = handler[0].substr(1);
+
+            var joint = handler[0][0];
+            if (joint === '>' || joint == '*') {
+                var tmp = type;
+                type = joint;
+                joint = tmp;
+                handler[0] = handler[0].substr(1);
+            } else {
+                joint = '';
+            }
+            var instance = '';
+            if (handler[0].indexOf('/')) {
+                handler = handler[0].split('/');
+                instance = handler.length > 1 ? handler[0] : '';
+                handler = handler[1] || handler[0];
+            }
+
+            handler = {
+                instance: instance,
+                method: handler,
+                type: type,
+                options: options,
+                joint: joint
+            };
             next(handler, true);
         });
 
