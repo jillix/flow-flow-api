@@ -27,11 +27,11 @@ class FlowApi {
         // .. get the data flow from an instance listener 
         var listenerDataFlow = [
             [":instance/methodA", {some: 'options'}],
-            [":instance/methodB", {some: 'options'}],
-            [":instance/methodC", {some: 'options'}],
-            [":instance/methodD", {some: 'options'}],
-            [":instance/methodE", {some: 'options'}],
-            [":instance/methodF", {some: 'options'}]
+            [".once", {some: 'options'}],
+            [">>event", {some: 'options'}],
+            ["|>leakEvent", {some: 'options'}],
+            [">*custom", {some: 'options'}],
+            ["|*leakCustom", {some: 'options'}]
         ]
 
         cb(null, listenerDataFlow);
