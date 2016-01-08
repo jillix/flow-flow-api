@@ -45,7 +45,9 @@ exports.getInstanceListenerDataFlow = function (options, data, next) {
         }
 
         dataFlow.forEach(function (handler) {
-            // TODO generate a nice object
+            // TODO should the flow-api return in JSON-LD, like service-api?
+            //      then we would have one standartized format, from which
+            //      it can be converted in to whatever format.
             handler = handler instanceof Array ? handler : [handler];
             var options = handler[1] || {};
 
