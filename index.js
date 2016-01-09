@@ -31,6 +31,7 @@ exports.getInstanceListeners = function (options, data, next) {};
 exports.getInstanceListenerDataFlow = function (options, data, next) {
 
     if (!data.comp) {
+        data.comp = 'thisInst';
         //return next(new Error());
     }
 
@@ -63,10 +64,10 @@ exports.getInstanceListenerDataFlow = function (options, data, next) {
             } else {
                 joint = '';
             }
-            var instance = '';
+            var instance = data.comp;
             if (handler[0].indexOf('/')) {
                 handler = handler[0].split('/');
-                instance = handler.length > 1 ? handler[0] : '';
+                instance = handler.length > 1 ? handler[0] : data.comp;
                 handler = handler[1] || handler[0];
             }
 
