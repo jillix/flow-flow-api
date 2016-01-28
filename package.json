@@ -25,7 +25,7 @@
     "url": "https://github.com/jillix/flow-api/issues"
   },
   "homepage": "https://github.com/jillix/flow-api",
-  "main": "index",
+  "main": "lib/index.js",
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
