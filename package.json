@@ -1,5 +1,5 @@
 {
-  "name": "flow-api",
+  "name": "flow-flow-api",
   "version": "1.0.0",
   "private": true,
   "author": "jillix <contact@jillix.com> (http://jillix.com)",
@@ -17,7 +17,9 @@
     "stream",
     "network"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "flow-api": "jillix/flow-api"
+  },
   "engine": {
     "node": ">=5"
   },
