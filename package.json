@@ -1,7 +1,6 @@
 {
   "name": "flow-flow-api",
   "version": "1.0.0",
-  "private": true,
   "author": "jillix <contact@jillix.com> (http://jillix.com)",
   "description": "Flow composition manipulation",
   "contributors": [
@@ -10,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jillix/flow-api.git"
+    "url": "git+https://github.com/jillix/flow-flow-api.git"
   },
   "keywords": [
     "flow",
@@ -24,9 +23,9 @@
     "node": ">=5"
   },
   "bugs": {
-    "url": "https://github.com/jillix/flow-api/issues"
+    "url": "https://github.com/jillix/flow-flow-api/issues"
   },
-  "homepage": "https://github.com/jillix/flow-api",
+  "homepage": "https://github.com/jillix/flow-flow-api",
   "main": "lib/index.js",
   "devDependencies": {},
   "scripts": {

@@ -1,35 +1,41 @@
-# flow-api
-Flow composition manipulation.
+# flow-flow-api [![Version](https://img.shields.io/npm/v/flow-flow-api.svg)](https://www.npmjs.com/package/flow-flow-api) [![Downloads](https://img.shields.io/npm/dt/flow-flow-api.svg)](https://www.npmjs.com/package/flow-flow-api)
 
-## Ideas
+> Flow composition manipulation
 
- - make the data store plugable (now it's the the git repo on the fs)
- - using the JSON-LD format would maybe open up some amazing possibilities (SEO)
+## Installation
 
-## Methods
+```sh
+$ npm i --save flow-flow-api
+```
 
-#### Getters
+## Example
 
- - create new instance with module default config (package.composition)
- - create custom module instance (config.module = {main: "", browser: ""})
- - ?(extend existing instance with module default config)?
- - rename instance (enny?)
- - set/rm entrypoint (package.entrypoints)
- - set/rm config (config.config)
- - set/rm load instance (config.load)
- - set/rm instance role (config.roles)
- - set/rm markup (config.markups)
- - set/rm style (config.stules)
- - set/rm listener (flow[listener])
- - set/rm end event
- - set/rm error event
- - set/rm data handler (":", ".")
- - set/rm stream handler (">", "|")
- - set/rm flow handler (">", "|")
- - move handler (flow.d array position)
+```js
+const flowApi = require("flow-flow-api");
+```
 
-### Getters
+## Documentation
 
- - get instance
- - get instances (object stream, graph format? JSON-LD visualizer????)
- - get module default config
+### `getAppGraphData(options, data, next)`
+Parses and sends back the application builder data.
+
+#### Params
+- **Object** `options`: The options object.
+- **Object** `data`: An object containing the following fields:
+ - `app` (String): The application name (**todo**: this is currently hardcoded as `service`.
+- **Function** `next`: The `next` handler used in flow.
+
+## How to contribute
+Have an idea? Found a bug? See [how to contribute][contributing].
+
+## Where is this library used?
+If you are using this library in one of your projects, add it in this list. :sparkles:
+
+## License
+
+[MIT][license] © [jillix][website]
+
+[license]: http://showalicense.com/?fullname=jillix%20%3Ccontact%40jillix.com%3E%20(http%3A%2F%2Fjillix.com)&year=2015#license-mit
+[website]: http://jillix.com
+[contributing]: /CONTRIBUTING.md
+[docs]: /DOCUMENTATION.md
