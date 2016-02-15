@@ -2,7 +2,7 @@
   "name": "flow-flow-api",
   "version": "1.0.1",
   "author": "jillix <contact@jillix.com> (http://jillix.com)",
-  "description": "Flow composition manipulation",
+  "description": "Flow API wrapper for flow.",
   "contributors": [
     "Adrian Ottiker <adrian@ottiker.com>",
     "Ionică Bizău <bizauionica@gmail.com> (http://ionicabizau.net)"
