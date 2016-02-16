@@ -1,6 +1,6 @@
 # flow-flow-api [![Version](https://img.shields.io/npm/v/flow-flow-api.svg)](https://www.npmjs.com/package/flow-flow-api) [![Downloads](https://img.shields.io/npm/dt/flow-flow-api.svg)](https://www.npmjs.com/package/flow-flow-api)
 
-> Flow composition manipulation
+> Flow API wrapper for flow.
 
 ## Installation
 
@@ -12,6 +12,12 @@ $ npm i --save flow-flow-api
 
 ```js
 const flowApi = require("flow-flow-api");
+
+flowApi.getAppGraphData({}, {
+    app: "service"
+}, function (err, data) {
+    /* do something */
+});
 ```
 
 ## Documentation
