@@ -5,3 +5,8 @@ flowApi.getAppGraphData({}, {
 }, function (err, data) {
     /* do something */
 });
+
+
+flowApi.searchModules({}, { pattern: "html" }, function (err, data) {
+    console.log(err || data);
+});
