@@ -19,7 +19,7 @@
   "dependencies": {
     "class-methods": "^1.0.0",
     "flow-api": "jillix/flow-api",
-    "fn-args": "^1.0.0",
+    "function-args": "^1.0.0",
     "set-or-get": "^1.2.1",
     "static-methods": "^1.0.0"
   },
