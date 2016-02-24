@@ -34,7 +34,9 @@ method as data handler (`options`, `data`, `next`). :sparkles:
 flowApi.foo("first argument", "second argument", function (err, data) {
    /* ... */
 });
-// This is how you do it in flow-flow-api flowFlowApi.foo({}, {
+
+// This is how you do it in flow-flow-api
+flowFlowApi.foo({}, {
    bar: "first argument"
  , baz: "second argument"
 }, function (err, data) {
