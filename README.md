@@ -13,23 +13,34 @@ $ npm i --save flow-flow-api
 ```js
 const flowApi = require("flow-flow-api");
 
-flowApi.getAppGraphData({}, {
-    app: "service"
-}, function (err, data) {
-    /* do something */
+flowApi.searchModules({}, { pattern: "html" }, function (err, data) {
+    console.log(err || data);
 });
 ```
 
 ## Documentation
 
-### `getAppGraphData(options, data, next)`
-Parses and sends back the application builder data.
+This libary is nothing more than a smart wrapper around the
+[`flow-api`](https://github.com/jillix/flow-api). All the
+`flow-api` methods are exported in this module. :tada:
 
-#### Params
-- **Object** `options`: The options object.
-- **Object** `data`: An object containing the following fields:
- - `app` (String): The application name (**todo**: this is currently hardcoded as `service`.
-- **Function** `next`: The `next` handler used in flow.
+Supposing that in `flow-api` we have a function like
+`foo (bar, baz, cb)`, `flow-flow-api` exposes this `foo`
+method as data handler (`options`, `data`, `next`). :sparkles:
+
+### Calling methods
+
+```js
+flowApi.foo("first argument", "second argument", function (err, data) {
+   /* ... */
+});
+// This is how you do it in flow-flow-api flowFlowApi.foo({}, {
+   bar: "first argument"
+ , baz: "second argument"
+}, function (err, data) {
+   /* ... */
+});
+```
 
 ## How to contribute
 Have an idea? Found a bug? See [how to contribute][contributing].

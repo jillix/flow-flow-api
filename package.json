@@ -38,5 +38,42 @@
   "directories": {
     "example": "example"
   },
+  "blah": {
+    "documentation": [
+      {
+        "p": [
+          [
+            "This libary is nothing more than a smart wrapper around the",
+            "[`flow-api`](https://github.com/jillix/flow-api). All the",
+            "`flow-api` methods are exported in this module. :tada:"
+          ],
+          [
+            "Supposing that in `flow-api` we have a function like",
+            "`foo (bar, baz, cb)`, `flow-flow-api` exposes this `foo`",
+            "method as data handler (`options`, `data`, `next`). :sparkles:"
+          ],
+          {
+            "h3": "Calling methods"
+          },
+          {
+            "code": {
+              "language": "js",
+              "content": [
+                "flowApi.foo(\"first argument\", \"second argument\", function (err, data) {",
+                "   /* ... */",
+                "});",
+                "// This is how you do it in flow-flow-api flowFlowApi.foo({}, {",
+                "   bar: \"first argument\"",
+                " , baz: \"second argument\"",
+                "}, function (err, data) {",
+                "   /* ... */",
+                "});"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
   "license": "MIT"
 }
